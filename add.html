@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take user input</title>
+    
+</head>
+<body>
+    <h1>Addition</h1>
+    <br>
+    <form onsubmit="doSum(); return false">
+        num1 : <input id="num1" type="number" required>
+        <br>
+        <br>
+        num2 : <input id="num2" type="number" required>
+        <br>
+        <br>
+        <button type="submit">Add</button>
+        <br>
+        <h3 id="result"> </h3>
+    </form>
+
+    <script>
+        function doSum() {
+            let firstNumber = Number(document.querySelector("#num1").value)
+            let secondNumber = Number(document.querySelector("#num2").value);
+            let sum = firstNumber + secondNumber;
+
+            document.querySelector("#result").innerHTML = sum;
+
+
+        }
+    </script>
+</body>
+</html>
